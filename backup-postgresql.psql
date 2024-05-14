@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#Pull our environment variables in
+source .env
