@@ -23,7 +23,9 @@ CONTAINER_TAG=fafnir:jenkins
 CONTAINER_NAME=fafnir-jenkins
 
 if [ -z "$(docker images -q $CONTAINER_TAG 2> /dev/null)" ]; then
-  	# do something
+  	# create the network
+   	docker network create jenkins
+    	#build the image
 	docker build -t $CONTAINER_TAG $WORK_DIR
 fi
 
